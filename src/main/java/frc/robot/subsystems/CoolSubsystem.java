@@ -133,6 +133,11 @@ public class CoolSubsystem extends SubsystemBase {
         topShooterMotor.setIdleMode(IdleMode.kCoast);
         bottomShooterMotor.setIdleMode(IdleMode.kCoast);
 
+        //topFeedMotor.setInverted(true);
+        //bottomFeedMotor.setInverted(true);
+        //topShooterMotor.setInverted(true);
+        //bottomShooterMotor.setInverted(true);
+
         bottomFeedMotor.burnFlash();
         topFeedMotor.burnFlash();
         bottomShooterMotor.burnFlash();
