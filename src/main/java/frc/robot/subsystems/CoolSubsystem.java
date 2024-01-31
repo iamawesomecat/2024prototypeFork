@@ -33,7 +33,7 @@ public class CoolSubsystem extends SubsystemBase {
 
     // defaults 0.20 and 0.5
     private static final double FEEDING_SPEED = 0.4;
-    private static final double SHOOTING_SPEED = 0.8;
+    private static final double SHOOTING_SPEED = 0.4;
 
     //pid
 
@@ -135,8 +135,8 @@ public class CoolSubsystem extends SubsystemBase {
 
         //topFeedMotor.setInverted(true);
         //bottomFeedMotor.setInverted(true);
-        //topShooterMotor.setInverted(true);
-        //bottomShooterMotor.setInverted(true);
+        topShooterMotor.setInverted(true);
+        bottomShooterMotor.setInverted(true);
 
         bottomFeedMotor.burnFlash();
         topFeedMotor.burnFlash();
@@ -177,6 +177,9 @@ public class CoolSubsystem extends SubsystemBase {
         topShooterMotor.set(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
         bottomShooterMotor.set(-shootingSpeedEntry.getDouble(SHOOTING_SPEED));
         //setShooterVelocityGoal(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
+    }
+    public void shootTop(){
+        topShooterMotor.set(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
     }
 
     public void stopFeedMotors() {
