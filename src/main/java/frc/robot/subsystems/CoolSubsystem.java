@@ -175,11 +175,12 @@ public class CoolSubsystem extends SubsystemBase {
     public void shootForward() {
         System.out.println("gulp");
         topShooterMotor.set(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
-        bottomShooterMotor.set(-shootingSpeedEntry.getDouble(SHOOTING_SPEED));
+        bottomShooterMotor.set(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
         //setShooterVelocityGoal(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
     }
     public void shootTop(){
         topShooterMotor.set(shootingSpeedEntry.getDouble(SHOOTING_SPEED));
+        System.out.println("gulp 2");
     }
 
     public void stopFeedMotors() {
@@ -231,12 +232,12 @@ public class CoolSubsystem extends SubsystemBase {
 
     @Override
     public void periodic() {
-        topShootingSpeed = topFeedMotor.get();
-        bottomShootingSpeed = bottomFeedMotor.get();
+        topFeedingSpeed = topFeedMotor.get();
+        bottomFeedingSpeed = bottomFeedMotor.get();
         topShootingSpeed = topShooterMotor.get();
         bottomShootingSpeed = bottomShooterMotor.get();
 
-        setPID();
+        //setPID();
     }
     
 }

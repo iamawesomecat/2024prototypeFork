@@ -50,7 +50,7 @@ public class RobotContainer {
     m_driverController.rightTrigger().onTrue(new StopCommand(coolSubsystem));
     //AMP shooting config, spits it out the side next to the top shooting motor
     m_driverController.leftBumper().onTrue(new AmpCommand(coolSubsystem));
-    m_driverController.leftBumper().onTrue(new StopCommand(coolSubsystem));
+    m_driverController.rightBumper().onTrue(new StopCommand(coolSubsystem));
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
